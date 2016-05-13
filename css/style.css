@@ -1,0 +1,136 @@
+body {
+  margin-top:7.5%;
+}
+
+audio {
+  display:none;
+}
+
+#container {
+  width:450px;
+  position:relative;
+  margin:0 auto;
+}
+
+#count {
+  position:absolute;
+  top:200px;
+  left:183px;
+  font-size:40px;
+  color:#FFFFFF;
+  width:80px;
+  text-align:center;
+}
+
+#gameBoard{
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 225px solid #222222;
+    border-radius: 225px;
+    left: 0px;
+    top: 0px;
+}
+
+#start,#fail,#win {
+  width:450px;
+  height:300px;
+  text-align:center;
+  position:absolute;
+  background-color:black;
+  opacity:0.8;
+  border-radius:225px;
+  font-size:60px;
+  color:#ffffff;
+  padding-top:150px;
+  text-transform: uppercase;
+  line-height:1.3em;
+}
+
+#win {
+  font-size:40px;
+}
+
+#fail,#win{display:none;}
+
+#start:hover,#fail:hover,#win:hover {
+  cursor:pointer;
+}
+
+/*green*/
+#a {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 182px solid;
+    border-color:#0b7000;
+    border-bottom: none;
+    border-right: none;
+    border-top-left-radius: 182px;
+    left: 32px;
+    top: 32px;
+}
+
+/*red*/
+#b {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 182px solid;
+    border-color: #c30800;
+    border-bottom: none;
+    border-left: none;
+    border-top-right-radius: 182px;
+    left: 236px;
+    top: 32px;
+}
+
+/*#yellow*/
+#c {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 182px solid;
+    border-color:#c3b400;
+    border-top: none;
+    border-right: none;
+    border-bottom-left-radius: 182px;
+    left: 32px;
+    top: 236px;
+}
+
+/*blue*/
+#d {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 182px solid;
+    border-color:#196d85;
+    border-top: none;
+    border-left: none;
+    border-bottom-right-radius: 182px;
+    left: 236px;
+    top: 236px;
+}
+
+#countContainer {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 54px solid #222222;
+    border-radius: 54px;
+    left: 171px;
+    top: 171px;
+}
