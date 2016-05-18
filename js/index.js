@@ -1,3 +1,4 @@
+// sets initial settings
 var settings = {
   sequence: [],
   round: 0,
@@ -8,6 +9,7 @@ var settings = {
 $(document).ready(function() {
   var tone = $("#sound");
 
+  // lights up color and plays tone
   function animate(colorCode) {
 
     if (colorCode == "a") {
@@ -41,15 +43,18 @@ $(document).ready(function() {
     tone[0].play();
   }
 
+  // starts new game
   function newGame() {
     var text = "";
     var colorId = "abcd";
 
+    //adds next color to the sequence
     for (var i = 0; i < 1; i++) {
       text += colorId.charAt(Math.floor(Math.random() * colorId.length));
       settings.sequence.push(text);
     }
 
+    // loops through game sequence
     function gameLoop() {
       setTimeout(function() {
         animate(settings.sequence[settings.lightPosition]);
@@ -64,6 +69,7 @@ $(document).ready(function() {
       }, 1000)
     }
 
+    // Win game if 20 correct answers
     if (settings.sequence.length == 21) {
       setTimeout(function() {
         console.log("You Win!");
@@ -78,6 +84,7 @@ $(document).ready(function() {
     }
   }
 
+  //checks your answer and compares it to correct sequence
   function listen() {
 
     $("#a, #b, #c, #d").on("mousedown", function() {
@@ -119,9 +126,9 @@ $(document).ready(function() {
     setTimeout(function() {
       $("#count").html(settings.round)
     }, 500);
-    //playit();
   });
 
+  // reset settings on new game
   $("#fail").on("click", function() {
     $("#fail").hide();
     settings.sequence = [];
